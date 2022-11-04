@@ -15,11 +15,11 @@ function App() {
   };
 
   return (
-    <div>
+    <>
     {/* props created in the parent component to be called/used by the child */}
     <AddUser onAddUser={addUserHandler}/>
     <UsersList users={usersList}/>
-    </div>
+    </>
   );
 }
 
