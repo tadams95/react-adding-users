@@ -12,15 +12,15 @@ const [enteredAge, setEnteredAge] = useState("");
     event.preventDefault();
 
     //validate that user has input values, return if no inputs registered
-    if (setEnteredAge.trim().length === 0 || enteredAge.trim().length === 0) {
+    if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
         return;
     }
 
     if (+enteredAge < 1) {
         return;
     }
-
-    console.log(enteredUsername, enteredAge)
+    //forward data up to App.js/parent component
+    props.onAddUser(enteredUsername, enteredAge);
     //reset input values after form submission
     setEnteredUsername("");
     setEnteredAge("");
